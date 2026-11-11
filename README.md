@@ -37,4 +37,4 @@ An end-to-end data analytics project focused on analysing customer shopping beha
 
 For a detailed explanation of the project, methodology, SQL analysis, dashboard, and business recommendations:
 
-./Customer%20Shopping%20Behavior%20Analysis.pdf
+[📄 View Customer Shopping Behavior Analysis (PDF)](https://github.com/Eshpreet/Ecommerce-Sales-Analysis/blob/main/Customer%20Shopping%20Behavior%20Analysis.pdf)
