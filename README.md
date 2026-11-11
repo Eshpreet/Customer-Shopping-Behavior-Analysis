@@ -37,4 +37,4 @@ An end-to-end data analytics project focused on analysing customer shopping beha
 
 For a detailed explanation of the project, methodology, SQL analysis, dashboard, and business recommendations:
 
-View Customer Shopping Behavior Analysis (PDF)
+./Customer%20Shopping%20Behavior%20Analysis.pdf
