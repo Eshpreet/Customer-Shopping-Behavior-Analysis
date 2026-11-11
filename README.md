@@ -27,6 +27,12 @@ An end-to-end data analytics project focused on analysing customer shopping beha
 
 ## Key Analysis Areas
 - Customer demographics and purchasing behaviour.
+
+ ## Project Report
+
+For a detailed explanation of the project, methodology, SQL analysis, dashboard, and business recommendations:
+
+[View Project Report (PDF)](Project-Report.pdf)
 - Product category performance.
 - Sales and revenue trends.
 - Payment methods and shipping preferences.
