@@ -2,7 +2,6 @@
 
 -- 1. Dataset coverage and relationship integrity
 
--- Match records and unique matches
 SELECT
     COUNT(*) AS match_rows,
     COUNT(DISTINCT match_id) AS unique_matches
@@ -34,7 +33,6 @@ FROM matches_cleaned;
 
 
 -- 3. Team appearances and wins
--- Historical team names are kept as recorded in the source data.
 WITH appearances AS (
     SELECT match_id, team1 AS team
     FROM matches_cleaned
@@ -74,7 +72,6 @@ ORDER BY wins DESC, win_pct DESC;
 
 
 -- 4. Top run scorers
--- Wides are excluded from balls faced.
 WITH batting AS (
     SELECT
         batsman,
@@ -117,7 +114,6 @@ LIMIT 20;
 
 
 -- 6. Innings totals
--- Super-over innings (innings 3 and above) are excluded.
 SELECT
     match_id,
     inning,
@@ -139,7 +135,6 @@ ORDER BY match_id, inning;
 
 
 -- 7. Scoring by phase
--- Powerplay: overs 0-5; Middle: overs 6-14; Death: overs 15+
 SELECT
     over_phase,
     SUM(total_runs) AS runs,
@@ -162,7 +157,6 @@ END;
 
 
 -- 8. Toss winner also won the match
--- Only matches with a recorded winner and toss winner are included.
 SELECT
     COUNT(*) AS decided_matches,
     COUNT(CASE WHEN winner = toss_winner THEN 1 END) AS toss_winner_match_wins,
@@ -234,7 +228,6 @@ ORDER BY batting_runs DESC;
 
 
 -- 13. Most productive player by season
--- RANK() returns all players tied for the highest runs in a season.
 WITH player_season AS (
     SELECT
         m.season,
@@ -259,7 +252,6 @@ ORDER BY season;
 
 
 -- 14. Delivery date reconciliation
--- Source delivery dates should align with the corresponding match date.
 SELECT
     COUNT(*) AS rows_with_date_mismatch
 FROM deliveries_cleaned AS d
